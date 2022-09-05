@@ -1,11 +1,12 @@
 import React from "react";
-import { Button } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
+import { Header } from "./components/header";
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Button>Hello</Button>
-    </div>
+    <Container maxW="container.xl">
+      <Header />
+    </Container>
   );
 };
 
