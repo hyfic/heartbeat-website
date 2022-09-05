@@ -1,6 +1,4 @@
 import React from "react";
-import { MdOutlineDarkMode } from "react-icons/md";
-import { FiSun } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import {
   Flex,
@@ -37,18 +35,6 @@ export const Header: React.FC = () => {
             variant="ghost"
           />
         </a>
-        <IconButton
-          aria-label="Toggle theme"
-          icon={
-            colorMode === "light" ? (
-              <MdOutlineDarkMode className="text-xl" />
-            ) : (
-              <FiSun className="text-xl" />
-            )
-          }
-          onClick={toggleColorMode}
-          variant="ghost"
-        />
       </Flex>
     </Flex>
   );
