@@ -1,25 +1,15 @@
-import React from 'react';
-import { PropsWithChildren } from 'react';
-import {
-  ChakraProvider,
-  ColorModeScript,
-  extendTheme,
-  ThemeConfig,
-} from '@chakra-ui/react';
+import React from "react";
+import { PropsWithChildren } from "react";
+import { ChakraProvider, extendTheme, ThemeConfig } from "@chakra-ui/react";
 
 type ReactComponent<Props = {}> = React.FC<PropsWithChildren<Props>>;
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: "light",
 };
 
 const theme = extendTheme({ config });
 
 export const ChakraWrap: ReactComponent = ({ children }) => {
-  return (
-    <ChakraProvider>
-      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-      {children}
-    </ChakraProvider>
-  );
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 };
